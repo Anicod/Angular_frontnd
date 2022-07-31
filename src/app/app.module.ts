@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ForgotComponent } from './components/forgot/forgot.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

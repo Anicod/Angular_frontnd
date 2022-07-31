@@ -1,18 +1,20 @@
 <div class="container">
 
     <div class="inner-container">
-     <div><h1 style="text-align: center;"><span style="color: blue;">F</span><span style="color: red;">u</span><span style="color: orange;">n</span><span style="color: blue;">d</span><span style="color: green;">o</span><span style="color: red;">o</span></h1></div>
-     <p style="text-align: center; font-size: 20px;">Create a strong password</p>
-     <p style="text-align: center; font-size: 15px;">Create a new strong password that you never used </p>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div><h1 style="text-align: center;"><span style="color: blue;">F</span><span style="color: red;">u</span><span style="color: orange;">n</span><span style="color: blue;">d</span><span style="color: green;">o</span><span style="color: red;">o</span></h1></div>
+     <p style="text-align: center; font-size: 20px;">Find your email</p>
+     <p style="text-align: center; font-size: 15px;">enter your phone number or recovery email</p>
         <mat-form-field style="width: 90%; margin-bottom:-1px;" appearance="outline">
-            <mat-label>Create Password</mat-label>
-            <input matInput placeholder="Create Password">
-        </mat-form-field>   
-    </div>
+            <mat-label>phone number or email</mat-label>
+            <input matInput placeholder="" formControlName="email" />
+            <mat-error>Enter email address</mat-error>
+        </mat-form-field>
     <div class="final-container">
          <div>
-             <button mat-raised-button color="primary"  (click)="conformPassword()">Next</button>
+             <button mat-raised-button color="primary" style="margin-left: 5pc;">Next</button>
          </div>   
      </div>
+    </form>    
 </div>
 

@@ -2,20 +2,20 @@
 
     <div class="inner-container">
         <h1><span style="color: blue;">F</span><span style="color: red;">u</span><span style="color: orange;">n</span><span style="color: blue;">d</span><span style="color: green;">o</span><span style="color: red;">o</span></h1>
-        <h3>Create Your Fundoo Account</h3>
+        <h3 id="hefont">Create Your Fundoo Account</h3>
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-        <mat-form-field style="width: 50%;" appearance="outline">
+        <mat-form-field id="nameSize" appearance="outline">
             <mat-label>First Name</mat-label>
              <input matInput placeholder="" formControlName="firstName" />
             <mat-error>Enter first Name</mat-error>
         </mat-form-field>
-        <mat-form-field style="width: 45%; margin-left: 5%;" appearance="outline">
-            <mat-label>last Name</mat-label>
-            <input matInput placeholder="" formControlName="lastName" />
+        <mat-form-field appearance="outline" id="custSize">
+            <mat-label>last Name</mat-label >
+            <input matInput placeholder="" formControlName="lastName"/>
             <mat-error>Enter last Name</mat-error>
         </mat-form-field>
         <div style="margin-bottom: -1.5pc;">
-            <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-form-field appearance="outline" id="userSize">
                 <mat-label>User Name</mat-label>
                 <input matInput placeholder="" formControlName="email" />
                 <mat-error>enter email address</mat-error>    
@@ -23,12 +23,12 @@
         </div>
         <h5 style="margin-left: 10px;">You can use numbers, letters and period</h5>
         <button id="email-selector" style="border: none; background-color: inherit; margin-bottom: 20px;"><a href="#" style="font-weight: 500; text-decoration: none; padding: 5px; border-radius: 5px; color: rgb(34, 0, 255);">Use My Current Email Address Instead</a></button>
-        <mat-form-field style="width: 50%;" appearance="outline">
+        <mat-form-field id="pasSize" appearance="outline">
             <mat-label>Password</mat-label>
             <input matInput placeholder="" formControlName="password" type="password"/>
             <mat-error>enter password</mat-error>
         </mat-form-field>
-            <mat-form-field style="width: 45%; margin-left: 5%" appearance="outline">
+            <mat-form-field id="conpasSize" appearance="outline">
                 <mat-label>Confirm Password</mat-label>
                 <input matInput placeholder="" formControlName="password" />
                 <mat-error>enter conform password</mat-error>
@@ -38,10 +38,11 @@
         </section>
         <div class="final-container">
            <div>
-                <p style="font-size: 16px; color: #1A73EB; cursor: pointer;" (click)="func()">Sign in instead</p>
+                <a href="/register"></a>
+               <a href="/login" id="butnSize">Sign in instead</a>
            </div>
             <div>
-                <button mat-raised-button color="primary" style="margin-left: 10pc;">Next</button>
+                <button mat-raised-button color="primary" id="btnNx">Next</button>
             </div>   
         </div>
     </form>
@@ -49,8 +50,8 @@
     </div>
     <div>
         <figure style="text-align: center; margin-top: 100px;">
-            <img height="244" width="244" src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="">
-            <figcaption >One account. All of Google working for you.</figcaption>
+            <img height="244" width="244" id="img" src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="">
+            <figcaption><p  id="textp">One account. All of Google working for you.</p></figcaption>
         </figure> 
     </div>
 </div>

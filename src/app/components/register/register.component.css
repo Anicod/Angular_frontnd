@@ -7,6 +7,7 @@
     border-radius: 10px;
     height: 80%;
     margin-top: 3%;
+    
  }
 
  .inner-container{
@@ -27,6 +28,34 @@ h3{
  .final-container{
     display: flex;
  }
+ #userSize{
+   width: 95%;
+ }
+ #custSize{
+   width: 40%;
+   margin-left: 10%;
+ }
+ #nameSize{
+   width: 45%;
+ }
+ #pasSize{
+   width: 50%;
+ }
+ #conpasSize{
+   width: 45%; 
+   margin-left: 5%
+ }
+ #butnSize{
+   font-size: 16px; 
+   color: #1A73EB; 
+   cursor: pointer;
+ }
+ #btnNx{
+   margin-left: 10pc;
+
+ }
+
+ 
 
  @media only screen and (max-width: 1000px) {
    .container{
@@ -40,6 +69,16 @@ h3{
    h3{
       font-size: 20px;
    }
+   #userSize{
+      width: 100%;
+   }
+   #custSize{
+      width: 50%;
+
+   }
+   #nameSize{
+      width: 45%;
+    }
  }
 
  @media only screen and (max-width: 1200px) {
@@ -52,4 +91,101 @@ h3{
       height: 90%;
       margin-top: 3%;
    }
+   #custSize{
+      width: 45%;
+   }
+   #nameSize{
+      width: 50%;
+    }
  }
+
+ @media only screen and (max-width: 800px) {
+   .container{
+      border: 1px solid;
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      border-radius: 10px;
+      height: 90%;
+      margin-top: 3%;
+   
+   }
+   #img{
+      display: none;
+   }
+   #textp{
+      font-size: 1px;
+      color: aliceblue;
+   }
+   #userSize{
+      width: 100%;
+   }
+   #custSize{
+      width: 45%;
+   }
+   #nameSize{
+      width: 50%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+   .container{
+      border: 1px solid;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      border-radius: 10px;
+      height: 98%;
+      margin-top: 3%;
+   
+   }
+   .final-container{
+      display: flex;
+   }
+   #img{
+      display: none;
+   }
+   #textp{
+      font-size: 1px;
+      color: aliceblue;
+
+   }
+   #custSize{
+      margin-right: 1pc;
+      width: 90%; 
+      margin-left: -0.25pc;
+      
+   }
+   #userSize{
+      width: 90%;
+   }
+   #nameSize{
+      width: 90%;
+    }
+    #pasSize{
+      width: 90%;
+      margin-left: -0.5pc;
+      margin-right: 2pc;
+    }
+    #conpasSize{
+      margin-left: -0.5pc;
+      width: 90%;
+    }
+    #butnSize{
+      margin-top: 0.5pc;
+      color: #1A73EB; 
+      cursor: pointer;
+      font-size: 12px;
+
+    }
+    #hefont{
+      font-size: 15px;
+    }
+    #btnNx{
+      margin-left: 10pc;
+      margin: -100pc 6pc;
+      margin-top: -2pc 3pc
+   
+    }
+
+}

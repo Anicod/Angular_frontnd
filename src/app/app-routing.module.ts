@@ -6,7 +6,7 @@ import { ForgotComponent } from './components/forgot/forgot.component';
 
 
 const routes: Routes = [
-  {path : '', component : RegisterComponent},
+  {path : 'register', component : RegisterComponent},
   {path : 'login', component : LoginComponent},
   {path : 'forgot', component : ForgotComponent}
 ];

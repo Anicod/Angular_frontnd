@@ -22,19 +22,24 @@ export class RegisterComponent implements OnInit {
 
     }) 
   }
+  
+ 
+
   get f() { return this.registerForm.controls; }
 
-    onSubmit() {
+  onSubmit() {
         this.submitted = true;
 
-        // stop here if form is invalid
-        if (this.registerForm.invalid) {
-            return;
-        }
+      // stop here if form is invalid
+      if (this.registerForm.invalid) {
+          return;
+      }
 
-        // display form values on success
-        alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
-    }
+      // display form values on success
+      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+  }
+
+    
 
     onReset() {
         this.submitted = false;
