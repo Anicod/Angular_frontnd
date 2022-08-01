@@ -12,7 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotComponent } from './components/forgot/forgot.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,6 +32,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     MatCheckboxModule,
     MatButtonModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

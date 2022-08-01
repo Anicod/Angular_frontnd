@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/services/userservice/user.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -9,48 +10,47 @@ export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
     submitted = false;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private user:UserService) {}
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
-      firstName: ['', [Validators.required, Validators.pattern(/^[a-zA-Z ]{2,30}$/)]],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
+      fn: ['', [Validators.required, Validators.pattern(/^[a-zA-Z ]{2,30}$/)]],
+      ln: ['', Validators.required],
+      el: ['', [Validators.required, Validators.email]],
+      pwd: ['', [Validators.required, Validators.minLength(6)]],
+      cp: ['', Validators.required],
 
 
     }) 
   }
-  
- 
-
   get f() { return this.registerForm.controls; }
 
+
   onSubmit() {
-        this.submitted = true;
+    this.submitted = true;
 
-      // stop here if form is invalid
-      if (this.registerForm.invalid) {
-          return;
+      if (this.registerForm.valid) {
+          console.log("data valid", this.registerForm.value);
+          let  data={
+            
+              
+            firstName: this.registerForm.value.fn,
+            lastName: this.registerForm.value.ln,
+            email:this.registerForm.value.el,
+            password: this.registerForm.value.pwd,
+            service:"advance"
+            }
+            this.user.register(data).subscribe((response:any)=>{
+              console.log("register============",response)
+            })
       }
-
-      // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+      else{
+        console.log("data invalid", this.registerForm.value);
+      }   
   }
-
-    
-
-    onReset() {
-        this.submitted = false;
-        this.registerForm.reset();
-    }
-
-
-func(){
-  window.location.href += '/login'
+  onReset() {
+    this.submitted = false;
+    this.registerForm.reset();
 }
-filledDetails(){
-  alert("your account is created")
-}
+
 }

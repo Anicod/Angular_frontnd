@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/services/userservice/user.service';
 
 @Component({
   selector: 'app-forgot',
@@ -10,11 +11,11 @@ export class ForgotComponent implements OnInit {
   registerForm!: FormGroup;
     submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private user:UserService) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
+      el: ['', [Validators.required, Validators.email]],
     })
   }
   get f() { return this.registerForm.controls; }
@@ -23,8 +24,13 @@ export class ForgotComponent implements OnInit {
       this.submitted = true;
 
       // stop here if form is invalid
-      if (this.registerForm.invalid) {
-          return;
+      if (this.registerForm.valid) {
+          console.log("valid data",this.registerForm.value)
+      }
+
+      else{
+        console.log("Invalid data",this.registerForm.value)
+        
       }
 
       // display form values on success

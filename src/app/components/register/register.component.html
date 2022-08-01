@@ -6,18 +6,18 @@
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <mat-form-field id="nameSize" appearance="outline">
             <mat-label>First Name</mat-label>
-             <input matInput placeholder="" formControlName="firstName" />
+             <input matInput placeholder="" formControlName="fn" />
             <mat-error>Enter first Name</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline" id="custSize">
             <mat-label>last Name</mat-label >
-            <input matInput placeholder="" formControlName="lastName"/>
+            <input matInput placeholder="" formControlName="ln"/>
             <mat-error>Enter last Name</mat-error>
         </mat-form-field>
         <div style="margin-bottom: -1.5pc;">
             <mat-form-field appearance="outline" id="userSize">
                 <mat-label>User Name</mat-label>
-                <input matInput placeholder="" formControlName="email" />
+                <input matInput placeholder="" formControlName="el" />
                 <mat-error>enter email address</mat-error>    
             </mat-form-field>
         </div>
@@ -25,12 +25,12 @@
         <button id="email-selector" style="border: none; background-color: inherit; margin-bottom: 20px;"><a href="#" style="font-weight: 500; text-decoration: none; padding: 5px; border-radius: 5px; color: rgb(34, 0, 255);">Use My Current Email Address Instead</a></button>
         <mat-form-field id="pasSize" appearance="outline">
             <mat-label>Password</mat-label>
-            <input matInput placeholder="" formControlName="password" type="password"/>
+            <input matInput placeholder="" formControlName="pwd" type="password"/>
             <mat-error>enter password</mat-error>
         </mat-form-field>
             <mat-form-field id="conpasSize" appearance="outline">
                 <mat-label>Confirm Password</mat-label>
-                <input matInput placeholder="" formControlName="password" />
+                <input matInput placeholder="" formControlName="cp" />
                 <mat-error>enter conform password</mat-error>
             </mat-form-field>
         <section class="example-section">
@@ -45,8 +45,7 @@
                 <button mat-raised-button color="primary" id="btnNx">Next</button>
             </div>   
         </div>
-    </form>
-        
+    </form>  
     </div>
     <div>
         <figure style="text-align: center; margin-top: 100px;">
