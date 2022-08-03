@@ -1,19 +1,16 @@
 <div class="container">
     <div class="inner-container">
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div><h1 style="text-align: center;"><span style="color: blue;">F</span><span style="color: red;">u</span><span style="color: orange;">n</span><span style="color: blue;">d</span><span style="color: green;">o</span><span style="color: red;">o</span></h1></div>
         <p style="text-align: center; font-size: 20px;">Sign in</p>
         <p style="text-align: center; font-size: 15px;">to continue to Fundoo</p>
            
            <mat-form-field style="width: 90%; margin-bottom:-1px;" appearance="outline">
                <mat-label>Email or Phone</mat-label>
-               <input matInput placeholder="" formControlName="el"/>
-            <mat-error>Enter email or phone number</mat-error>
+               <input matInput placeholder="Email or Phone"/>
            </mat-form-field>
            <mat-form-field style="width: 90%; margin-bottom:-1px;" appearance="outline">
                <mat-label>Password</mat-label>
-               <input matInput placeholder="" formControlName="pwd" type="password" />
-               <mat-error>Enter password</mat-error>
+               <input matInput placeholder="Password"/>
            </mat-form-field>   
            <div><a href="/forgot"><b style="color: blue; text-decoration:none ; margin-bottom: 5pc;">Forgot email</b></a></div><br><br>
            <p>Not your computer? Use Guest mode to sign in privately<a href="#"><div></div>Learn more</a></p>
@@ -22,8 +19,7 @@
             <a href="/" style="text-decoration: none; color: rgb(30, 0, 255);">Create account</a>
            </div>
             <div>
-                <button mat-raised-button color="primary" >Next</button>
+                <button mat-raised-button color="primary" (click)="login()">Next</button>
             </div>  
         </div>
-    </form>      
 </div>

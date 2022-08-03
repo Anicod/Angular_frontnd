@@ -1,0 +1,18 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.inner-container{
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.on-hover{
+    display: none;
+}
+
+.container :hover > .on-hover{
+    display: block;
+}

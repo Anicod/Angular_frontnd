@@ -1,0 +1,32 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="white" class="example-toolbar">
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+      <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" alt="">
+      <h1 class="example-app-name">Keep</h1>
+      <div style="margin-left: 200px;">
+        <input type="text" placeholder="search" style="width: 600px; padding: 10px; border-radius: 10px; margin-left: 70px;">
+      </div>
+      <span class="material-symbols-outlined" style="margin-left: 200px; font-size: 40px;">refresh</span>
+      <span class="material-symbols-outlined" style="margin-left: 40px; font-size: 40px;">Settings</span>
+      <span class="material-symbols-outlined" style="margin-left: 40px; font-size: 40px;">view_agenda</span>
+      <img src="https://lh3.googleusercontent.com/ogw/AOh-ky1wOFuhNmalfERjE-jkgP7Ge9XZ__UDEDdBi-JV3g=s32-c-mo" alt="" style="margin-left: 40px; border-radius: 50px;">
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="example-sidenav-container"
+                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-nav-list>
+         <a mat-list-item routerLink="/dashboard/getallnotes"><span class="material-symbols-outlined" style="font-size: 30px;">lightbulb</span><span style="text-indent: 30px;">Notes</span></a>
+         <a mat-list-item routerLink="."><span class="material-symbols-outlined" style="font-size: 30px;">Notifications</span><span style="text-indent: 30px;">Remainders</span></a>
+         <a mat-list-item routerLink="."><span class="material-symbols-outlined" style="font-size: 30px;">edit</span><span style="text-indent: 30px;">Edit label</span></a>
+         <a mat-list-item routerLink="/dashboard/archive"><span class="material-symbols-outlined" style="font-size: 30px;">archive</span><span style="text-indent: 30px;">Archive</span></a>
+         <a mat-list-item routerLink="/dashboard/trash"><span class="material-symbols-outlined" style="font-size: 30px;">Delete</span><span style="text-indent: 30px;">Trash</span></a>
+        </mat-nav-list>
+      </mat-sidenav>
+  
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>

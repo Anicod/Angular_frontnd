@@ -1,0 +1,14 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+    <div class="innerContainer" fxLayout="column">
+        <div *ngIf="isshow" >
+            <input type="text" placeholder="Title" class="inputContainer" [(ngModel)]="title">
+        </div>
+        <div *ngIf="!isshow || isshow" (click)="show()">
+            <input type="text"  placeholder="Take a notes" style="border: inherit; font-size: 30px; background-color: inherit; width: 500px; outline: none;" [(ngModel)]="desec">
+        </div>
+        <div *ngIf="isshow" (click)="close()" style="margin-top: 30px;">
+            <button style="float: right; border: none; background-color: inherit; cursor: pointer; font-size: 13px; font-weight: bold;" >Close</button>
+            <app-icons></app-icons>
+        </div>
+    </div>
+</div>
