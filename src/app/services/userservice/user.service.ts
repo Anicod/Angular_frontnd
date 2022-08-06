@@ -14,7 +14,7 @@ export class UserService {
         'Content-Type': 'application/json'
       })
     }
-    return this.http.postService('http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp', abcd, false, header)
+    return this.http.postService('http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp', abcd,  false, header)
 
   }
   login(abcd:any){

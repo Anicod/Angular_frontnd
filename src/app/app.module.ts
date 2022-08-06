@@ -26,7 +26,8 @@ import { CreateNoteComponent } from './components/create-note/create-note.compon
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { IconsComponent } from './components/icons/icons.component';
 import { DisplayComponent } from './components/display/display.component';
-
+import { UpdateComponent } from './components/update/update.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,8 @@ import { DisplayComponent } from './components/display/display.component';
     CreateNoteComponent,
     IconsComponent,
     DisplayComponent,
+    UpdateComponent,
+    
     
   ],
   imports: [
@@ -60,6 +63,7 @@ import { DisplayComponent } from './components/display/display.component';
     MatIconModule,
     MatListModule,
     FlexLayoutModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
